@@ -1,4 +1,4 @@
-#Sat Sep 28 16:31:31 CST 2024
+#Tue Oct 01 16:31:54 CST 2024
 base.0=C\:\\Users\\ovand\\OneDrive\\Documentos\\Portafolio\\OpTime\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\ovand\\OneDrive\\Documentos\\Portafolio\\OpTime\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\ovand\\OneDrive\\Documentos\\Portafolio\\OpTime\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex

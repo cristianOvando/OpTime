@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:skeletonflutter/components/my_button.dart';
-import 'package:skeletonflutter/components/my_textfield.dart';
-import 'package:skeletonflutter/components/square_tile.dart';
+import 'package:optime/components/my_button.dart';
+import 'package:optime/components/my_textfield.dart';
+import 'package:optime/components/square_tile.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -9,12 +9,14 @@ class LoginPage extends StatelessWidget {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
-  void signUserIn() {}
+  void signUserIn(BuildContext context) {
+    Navigator.pushNamed(context, '/Home');
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.grey[100],
       body: SafeArea(
         child: Center(
           child: Column(
@@ -22,7 +24,6 @@ class LoginPage extends StatelessWidget {
             children: [
               const SizedBox(height: 50),
 
-              // logo
               const Icon(
                 Icons.lock,
                 size: 100,
@@ -40,10 +41,9 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-            
               MyTextField(
                 controller: emailController,
-                hintText: 'email',
+                hintText: 'Correo',
                 obscureText: false,
               ),
 
@@ -51,7 +51,7 @@ class LoginPage extends StatelessWidget {
 
               MyTextField(
                 controller: passwordController,
-                hintText: 'Password',
+                hintText: 'Contraseña',
                 obscureText: true,
               ),
 
@@ -73,7 +73,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 25),
 
               MyButton(
-                onTap: signUserIn,
+                onTap: () => signUserIn(context),
               ),
 
               const SizedBox(height: 50),
@@ -110,7 +110,6 @@ class LoginPage extends StatelessWidget {
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-              
                   SquareTile(imagePath: 'lib/images/Google.png'),
                 ],
               ),
@@ -125,15 +124,22 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(color: Colors.grey[800]),
                   ),
                   const SizedBox(width: 4),
-                  const Text(
-                    'Registrate',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
+
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/Register');
+                    },
+                    child: const Text(
+                      'Registrate ahora',
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.underline,
+                      ),
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

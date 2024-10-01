@@ -164,12 +164,13 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "skeletonflutter",
+      "name": "optime",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
+  "generated": "2024-10-01T22:27:50.608694Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///C:/Users/ovand/Downloads/flutter_windows_3.24.2-stable/flutter",
