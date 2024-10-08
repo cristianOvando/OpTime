@@ -26,6 +26,7 @@ MERGED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src
 INJECTED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+MERGED from [:connectivity_plus] C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\ovand\.gradle\caches\transforms-3\cc7232fb6c214a1b97175fd1f50b4c7e\transformed\fragment-1.7.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.window:window:1.2.0] C:\Users\ovand\.gradle\caches\transforms-3\c9e50353e49ebbca8864fdca4e07ed25\transformed\jetified-window-1.2.0\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.window:window-java:1.2.0] C:\Users\ovand\.gradle\caches\transforms-3\911474af24280361aabe099b9ab4c068\transformed\jetified-window-java-1.2.0\AndroidManifest.xml:17:1-21:12
@@ -79,6 +80,8 @@ uses-sdk
 INJECTED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src\debug\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src\debug\AndroidManifest.xml
 INJECTED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src\debug\AndroidManifest.xml
+MERGED from [:connectivity_plus] C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:connectivity_plus] C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\ovand\.gradle\caches\transforms-3\cc7232fb6c214a1b97175fd1f50b4c7e\transformed\fragment-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.7.1] C:\Users\ovand\.gradle\caches\transforms-3\cc7232fb6c214a1b97175fd1f50b4c7e\transformed\fragment-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.window:window:1.2.0] C:\Users\ovand\.gradle\caches\transforms-3\c9e50353e49ebbca8864fdca4e07ed25\transformed\jetified-window-1.2.0\AndroidManifest.xml:20:5-44
@@ -133,6 +136,10 @@ MERGED from [androidx.window.extensions.core:core:1.0.0] C:\Users\ovand\.gradle\
 		INJECTED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src\debug\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:connectivity_plus] C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [:connectivity_plus] C:\Users\ovand\OneDrive\Documentos\Portafolio\OpTime\build\connectivity_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-76
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.2.0] C:\Users\ovand\.gradle\caches\transforms-3\c9e50353e49ebbca8864fdca4e07ed25\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
 	android:required
@@ -151,7 +158,7 @@ ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-
 		ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-3\f02b725bb6aaed645672a32e48a54332\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-3\f02b725bb6aaed645672a32e48a54332\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
-permission#com.example.skeletonflutter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.example.optime.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-3\f02b725bb6aaed645672a32e48a54332\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-3\f02b725bb6aaed645672a32e48a54332\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
@@ -161,7 +168,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-3\f02b725bb6aaed645672a32e48a54332\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-3\f02b725bb6aaed645672a32e48a54332\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
-uses-permission#com.example.skeletonflutter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.example.optime.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-3\f02b725bb6aaed645672a32e48a54332\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.13.1] C:\Users\ovand\.gradle\caches\transforms-3\f02b725bb6aaed645672a32e48a54332\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
