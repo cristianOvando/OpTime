@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:optime/pages/Calendar_Page.dart';
-import 'package:optime/pages/ChatBot_Page.dart';
-import 'package:optime/pages/Forum_Page.dart';
+import 'package:optime/pages/calendar_Page.dart';
+import 'package:optime/pages/chatBot_Page.dart';
+import 'package:optime/pages/forum_Page.dart';
 import 'package:optime/pages/home_page.dart';
 import 'package:optime/pages/login_page.dart';
 import 'package:optime/pages/register_page.dart';
