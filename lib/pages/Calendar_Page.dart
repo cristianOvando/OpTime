@@ -70,12 +70,12 @@ class _CalendarPageState extends State<CalendarPage> {
 }
 
 Future<List<classroom.CourseWork>> getClassroomAssignments() async {
-  final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: [
+  final GoogleSignIn googleSignIn = GoogleSignIn(scopes: [
     classroomCoursesScope,
     classroomCourseworkStudentsScope,
   ]);
 
-  final account = await _googleSignIn.signIn();
+  final account = await googleSignIn.signIn();
   if (account == null) return [];
 
   final authHeaders = await account.authHeaders;
