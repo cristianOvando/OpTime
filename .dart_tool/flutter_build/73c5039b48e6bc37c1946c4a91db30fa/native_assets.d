@@ -1,1 +1,0 @@
- C:\\Users\\ovand\\OneDrive\\Documentos\\Portafolio\\OpTime\\.dart_tool\\flutter_build\\73c5039b48e6bc37c1946c4a91db30fa\\native_assets.yaml: 
