@@ -8,6 +8,7 @@ class RegisterPage extends StatelessWidget {
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
 
   void signUserUp(BuildContext context) {
     Navigator.pushNamed(context, '/');
@@ -16,123 +17,136 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: const Color(0xFFF6EFEF), // Color de fondo similar a la imagen
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(height: 50),
-              const Icon(
-                Icons.lock,
-                size: 50,
-              ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 40),
 
-              const SizedBox(height: 50),
-
-              const Text(
-                '¡Crea tu cuenta y se parte de nuestra app!',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0),
-                  fontSize: 16,
+                // Logo y texto de "OPTIME"
+                const Text(
+                  'OPTIME',
+                  style: TextStyle(
+                    fontFamily: 'Arial',
+                    fontSize: 48,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 5,
+                  ),
                 ),
-              ),
 
-              const SizedBox(height: 25),
+                const Text(
+                  '(Crea tu cuenta)',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.grey,
+                  ),
+                ),
 
-              MyTextField(
-                controller: emailController,
-                hintText: 'Correo Institucional',
-                obscureText: false,
-              ),
+                const SizedBox(height: 50),
 
-              const SizedBox(height: 10),
+                // Campo de correo institucional
+                MyTextField(
+                  controller: emailController,
+                  hintText: 'Correo institucional',
+                  obscureText: false,
+                ),
 
-              MyTextField(
-                controller: passwordController,
-                hintText: 'Contraseña',
-                obscureText: true,
-              ),
+                const SizedBox(height: 15),
 
-              const SizedBox(height: 10),
+                // Campo de contraseña con icono de visibilidad
+                MyTextField(
+                  controller: passwordController,
+                  hintText: 'Contraseña',
+                  obscureText: true,
+                  icon: Icons.visibility_off, // Icono de visibilidad
+                ),
 
-              MyTextField(
-                controller: passwordController,
-                hintText: 'Confirmar contraseña',
-                obscureText: true,
-              ),
+                const SizedBox(height: 15),
 
-              const SizedBox(height: 25),
+                // Campo de confirmar contraseña con icono de visibilidad
+                MyTextField(
+                  controller: confirmPasswordController,
+                  hintText: 'Confirmar contraseña',
+                  obscureText: true,
+                  icon: Icons.visibility_off, // Icono de visibilidad
+                ),
 
-              MyButton(
-                onTap: () => signUserUp(context),
-              ),
+                const SizedBox(height: 25),
 
-              const SizedBox(height: 50),
+                // Botón para "Iniciar sesión"
+                MyButton(
+                  onTap: () => signUserUp(context),
+                  buttonText: 'Iniciar sesión',
+                ),
 
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
+                const SizedBox(height: 30),
+
+                // Separador "O continuar con"
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Colors.grey[400],
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Text(
+                          'O continuar con',
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ),
+                      Expanded(
+                        child: Divider(
+                          thickness: 0.5,
+                          color: Colors.grey[400],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+
+                // Botón de Google
+                const SquareTile(imagePath: 'lib/images/Google.png'),
+
+                const SizedBox(height: 30),
+
+                // ¿Ya tienes cuenta? Iniciar sesión
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[400],
-                      ),
+                    const Text(
+                      '¿Ya tienes cuenta?',
+                      style: TextStyle(color: Colors.grey),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Text(
-                        'O continuar con',
-                        style: TextStyle(color: Colors.grey[800]),
-                      ),
-                    ),
-                    Expanded(
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey[400],
+                    const SizedBox(width: 4),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      child: const Text(
+                        'Iniciar sesión',
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                        ),
                       ),
                     ),
                   ],
                 ),
-              ),
 
-              const SizedBox(height: 50),
-
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SquareTile(imagePath: 'lib/images/Google.png'),
-                ],
-              ),
-
-              const SizedBox(height: 50),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '¿Ya tienes cuenta?',
-                    style: TextStyle(color: Colors.grey[800]),
-                  ),
-                  const SizedBox(width: 4),
-
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/');
-                    },
-                    child: const Text(
-                      'Iniciar sesion',
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+                const SizedBox(height: 40),
+              ],
+            ),
           ),
         ),
       ),
